@@ -1,0 +1,16 @@
+clear all; close all; clc;
+t=xlsread('matlab_basic02.xlsx','A3:A143');
+a=xlsread('matlab_basic02.xlsx','B3:B143');
+v=xlsread('matlab_basic02.xlsx','C3:C143');
+s=xlsread('matlab_basic02.xlsx','D3:D143');
+subplot(1,3,1);
+plot(t,a);
+title('a-t graph');
+subplot(1,3,2);
+plot(t,v);
+grid on;
+xlabel('time(s)');
+subplot(1,3,3);
+plot(t,s);
+axis tight;
+legend('displacement');

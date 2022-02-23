@@ -1,0 +1,11 @@
+x=-3:0.25:3;
+y=-3:0.25:3;
+[X,Y]=meshgrid(x,y);
+Z=1.8.^(-1.5*sqrt(X.^2+Y.^2)).*cos(0.5*Y).*sin(X);
+figure;
+subplot(2,2,1);mesh(X,Y,Z);axis tight;
+subplot(2,2,2);surf(X,Y,Z);axis tight;
+subplot(2,2,3);contour3(X,Y,Z,15);axis tight;
+subplot(2,2,4);contour(X,Y,Z,15);axis tight;
+figure; mesh(X,Y,Z); view(0,0); hold on;
+figure; mesh(X,Y,Z); view(90,0); hold on;
